@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
   console.log(`${song.title} by ${song.artist}`);
 
   // send JSON response to client
-  res.end(JSON.stringify(song)); // JSON.stringify({a: 1}) -> '{"a":1}' apparently it serializes the data
+  res.end(JSON.stringify(song)); // JSON.stringify({a: 1}) -> '{"a":1}' apparently it serializes the object to be able to send it over the network
 });
 
 server.listen(port, () => {
